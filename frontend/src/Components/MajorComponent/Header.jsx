@@ -1,33 +1,5 @@
-// import React from "react";
-// import logo from "../../assets/Logo.png"
-// import Button from "../MinorComponent/Button";
-// import { navItems } from "../../utils/Home.utils";
-// import { NavLink } from "react-router-dom";
-
-// const Header = () => {
-//     return (
-//         <div className="w-full h-30 ">
-//             <div className="flex items-center justify-center bg-primary text-white" > Welcome to Repairwala.com </div>
-//             <div className="px-6 w-full h-full  flex items-center  flex-col ">
-//                 <div className="  flex items-center justify-start w-full h-1/2 border-b-1"> <img src={logo} alt="Logo" className="w-32 h-auto" /> </div>
-//                 <div className="w-full h-1/2 border-b-1 flex items-center">
-//                     <Button>Browse All Categories</Button>
-//                     <nav>
-//                         {navItems.map((Items)=>(
-//                             <NavLink key={Items.name} to={Items.path}>{Items.name}</NavLink>
-//                         )
-//                         )}
-//                     </nav>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Header
-
 import React from "react";
-import logo from "../../assets/Logo.png";
+import { logo } from "../../assets/Images/index.js";
 import Button from "../MinorComponent/Button";
 import { navItems } from "../../utils/Home.utils";
 import { NavLink } from "react-router-dom";
@@ -101,7 +73,6 @@ const Header = () => {
                     </div>
 
                     <div>
-
                         <Button>Login Employee DashBoard</Button>
                     </div>
 
