@@ -2,20 +2,22 @@ import React from "react";
 import Button from "../Components/MinorComponent/Button";
 import { categories } from "../utils/Home.utils.jsx";
 import { logo } from "../assets/Images/index.js";
-import {s1banner1,s1Sidebanner1,s1Sidebanner2, s2banner1 } from "../assets/Images/Hero/index.js";
+import { s1banner1, s1Sidebanner1, s1Sidebanner2, s2banner1, s3banner1, s5banner1, s5banner2, s5banner3, s5banner4, s5banner5, s6banner1 } from "../assets/Images/Hero/index.js";
+import ServiceCard from "../Components/MajorComponent/ServiceCard.jsx";
+import RequestCallbackForm from "../Components/MajorComponent/RequestCallBackForm.jsx";
 
 const Home = () => {
 
     return (
         <>
             {/* Section one that includes Main Home Page Banners and Categories below */}
-            <section className="h-[100vh] flex  justify-center flex-col gap-10 ">
+            <section className="h-auto flex  justify-center  flex-col gap-10 ">
 
                 {/* Main Banners Main Div */}
-                <div className="flex flex-row  w-full h-[70%] gap-x-2">
+                <div className="flex flex-col md:flex-row  w-full  gap-2.5">
 
                     {/* Main Banner Sub Div Bannner 1 */}
-                    <div className="flex p-4 text-white flex-col w-[60%] h-full bg-cover bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
+                    <div className="flex p-4 text-white flex-col w-full   md:w-[60%] h-[185px] md:h-[446px] bg-cover bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
                         <h1 className="font-heading ">We Bring Your <br />
                             Home Appliances Back to Life
                         </h1>
@@ -23,16 +25,16 @@ const Home = () => {
                     </div>
 
                     {/* Main Banner Sub Div 2  */}
-                    <div className="flex flex-col  w-[40%] gap-y-2 h-full">
+                    <div className="flex flex-col w-full md:w-[40%] gap-y-2  md:h-[446px]">
                         {/* Sub div 2 Banner 1 */}
-                        <div className="w-full h-1/2 bg-cover bg-center rounded-2xl text-white p-4  " style={{ backgroundImage: `url(${s1Sidebanner1})` }}>
+                        <div className="w-full h[185px] bg-cover bg-center rounded-2xl text-white p-4 md:h-1/2 " style={{ backgroundImage: `url(${s1Sidebanner1})` }}>
                             <p className="pb-4">Your Local Appliance Repair Service Expert</p>
                             <h1 className="pb-4">Skilled, Affordable Service <br />
                                 on Your Schedule</h1>
                             <Button>Book Appointment</Button>
                         </div>
                         {/* sub Div2 Banner 2 */}
-                        <div className="w-full h-1/2 bg-cover bg-center rounded-2xl text-white p-4 " style={{ backgroundImage: `url(${s1Sidebanner2})` }}>
+                        <div className="w-full  bg-cover bg-center rounded-2xl text-white p-4 h-[185px] md:h-1/2" style={{ backgroundImage: `url(${s1Sidebanner2})` }}>
                             <p className="bottom-0">Home Appliances <br />
                                 Repair & Installation Services <br />
                                 in Indore</p>
@@ -64,16 +66,17 @@ const Home = () => {
             </section >
 
             {/* Section 2 Of Home Page includes Communications details and Banner */}
-            <section className="flex  gap-y-2.5  w-full h-[100vh] my-20 flex-col">
+            <section className="flex  gap-y-2.5  w-full h-auto my-20 flex-col">
 
                 {/*  Communication details div */}
 
-                <div className=" w-full flex itesms-center justify-between h-50 flex-row  " >
+                <div className=" w-full flex itesms-center justify-between md:h-auto flex-col md:flex-row gap-8 " >
 
-                    <div className="flex items-start justify-between  flex-col  ">
-                        <h1>The key to a long lasting <br />
+                    <div className="flex items-start justify-between flex-row md:flex-col w-full md:w-auto ">
+                        <span><h1>The key to a long lasting <br />
                             relationship is communication</h1>
-                        <h1>Multiple ways to reach us.</h1>
+                            <h1>Multiple ways to reach us.</h1>
+                        </span>
                         <Button className="w-20" >Book Now</Button>
                     </div>
 
@@ -91,7 +94,7 @@ const Home = () => {
 
                         <div className="flex gap-2.5">
                             <span className=" px-7.5 py-2.5 rounded-xl border-1 border-accent">SMS Service: Please send an SMS to 9133711006 by typing- BSH "Your Pincode".  </span>
-                     
+
                         </div>
                     </div>
                 </div>
@@ -104,6 +107,160 @@ const Home = () => {
 
 
             </section>
+
+            {/* Section 3 of Home Page */}
+            <section className="flex items-center justify-center w-full h-auto ">
+                <div className="flex items-center justify-center h-auto rounded-2xl w-full bg-cover bg-center text-white p-6" style={{ backgroundImage: `url(${s3banner1})` }}>
+                    <div className="flex items-center flex-col justify-between bg-[#A1A1A1]/40 rounded-2xl p-6 h-full gap-12 w-full" >
+                        <h1>Repair Wala Services Process</h1>
+                        <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1>01</h1>
+                                <h1>Book your appointment</h1>
+                                <p>Contact us via phone or online to<br />
+                                    schedule your Repair service.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1>02</h1>
+                                <h1>Inspection & service</h1>
+                                <p>Our certified technicians will <br />
+                                    arrive on time to inspect your <br />
+                                    system.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1>03</h1>
+                                <h1>Follow-up & support</h1>
+                                <p>We provide follow-up support <br />
+                                    and ongoing maintenance <br />
+                                    options.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 4 Of Home Page include services and its cards */}
+
+            <section className="flex items-center">
+                <ServiceCard />
+            </section>
+
+            {/* Section 5 On Home page below Services Section */}
+
+            <section className="flex items-center justify-center w-full md:h-[498px] my-5">
+                {/* main div */}
+                <div className="flex items-center   h-full flex-col md:flex-row  w-full gap-18 ">
+                    {/* image  div */}
+                    <div className=" flex gap-6 h-full w-full md:w-1/2 flex-row">
+                        <div className="w-1/2 h-full">
+                            <img className="w-full h-full" src={s5banner1} alt="Banner 1" />
+                        </div>
+                        <div className="w-1/2  h-full flex gap-6 flex-col ">
+                            <img className="h-1/2" src={s5banner2} alt="Banner 2" />
+                            <img className="h-1/2" src={s5banner3} alt="Banner 3" />
+                        </div>
+
+                    </div>
+
+                    {/* text div */}
+                    <div className="w-full md:w-[539px] flex gap-[69px] h-full flex-col justify-between">
+
+                        <div className="flex justify-between h-full gap-[30px] flex-col">
+
+                            <div className="flex gap-[15px] flex-col">
+                                <h1>A Worthy Appliances Repair Company</h1>
+                                <p>Our expert Appliances Repair are available 24/7 to fix any
+                                    Appliances issue,Whether it’s repairing a leak, unclogging a drain, or
+                                    servicing your water heater. We Guarantee accurate service on the
+                                    initial visit. </p>
+                            </div>
+
+                            <div className="flex border-1 border-accent rounded-2xl p-5 flex-col gap-[30px]">
+                                <div className="flex flex-row gap-8">
+                                    <img src={s5banner4} alt="s5banner4" />
+                                    <span className="flex flex-col gap-1.5">
+                                        <h1>Satisfaction Guaranteed</h1>
+                                        <p>Our team of experienced repair is prepared to<br />
+                                            tackle a variety of appliances repair problem</p>
+                                    </span>
+                                </div>
+
+                                <div className="flex flex-row gap-8">
+                                    <img src={s5banner5} alt="s5banner5" />
+                                    <span className="flex flex-col gap-1.5">
+                                        <h1>Trusted and Reliable</h1>
+                                        <p>Our team of experienced repair is prepared to <br />
+                                            tackle a variety of appliances repair problem</p>
+                                    </span>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div>
+                                <Button>View Services</Button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </section>
+
+            {/* Section 6  */}
+            <section className="flex items-center flex-col justify-center w-full my-20 gap-10" >
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-6 md:gap-[50px]">
+                    {/* Title */}
+                    <div className="text-[28px] font-semibold leading-tight">
+                        <div className="block md:hidden">RepairWala Partner Program</div>
+                        <div className="hidden md:block">
+                            <div>RepairWala</div>
+                            <div>Partner Program</div>
+                        </div>
+                    </div>
+
+                    {/* Description */}
+                    <div className="text-sm md:max-w-2xl">
+                        We are excited to invite you to join our trusted partner as a Repairwala Technician.
+                        This opportunity offers hands-on experience with a wide range of household appliances,
+                        working alongside a skilled and supportive team. If you have a passion for troubleshooting,
+                        a commitment to quality service, and a desire to grow in the field of appliance repair,
+                        this is the perfect role for you. Join us in delivering reliable repair solutions and exceptional customer satisfaction.
+                    </div>
+
+                    {/* Button */}
+                    <div className="w-full md:w-auto">
+                        <Button>
+                            Join Our Partners
+                        </Button>
+                    </div>
+                </div>
+
+                {/* Image Div */}
+                {/* <div className="" style={{ backgroundImage: `url(${s6banner1})` }}>
+
+                </div> */}
+                <img className="w-full h-[582px] md:h-[366px]" src={s6banner1} alt="s6banner1" />
+
+            </section>
+
+
+            {/*Section 7 Request Call Back Form Section */}
+            <section className="flex w-full">
+                <RequestCallbackForm />
+            </section>
+
 
         </>
     )
