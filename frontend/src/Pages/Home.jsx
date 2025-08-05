@@ -5,6 +5,8 @@ import { logo } from "../assets/Images/index.js";
 import { s1banner1, s1Sidebanner1, s1Sidebanner2, s2banner1, s3banner1, s5banner1, s5banner2, s5banner3, s5banner4, s5banner5, s6banner1 } from "../assets/Images/Hero/index.js";
 import ServiceCard from "../Components/MajorComponent/ServiceCard.jsx";
 import RequestCallbackForm from "../Components/MajorComponent/RequestCallBackForm.jsx";
+import TestimonialBox from "../Components/MajorComponent/TestimonialBox.jsx";
+import FrezzerBanner from "../Components/MinorComponent/FrezzerBanner.jsx";
 
 const Home = () => {
 
@@ -77,10 +79,10 @@ const Home = () => {
                             relationship is communication</h1>
                             <h1>Multiple ways to reach us.</h1>
                         </span>
-                        <Button className="w-20" >Book Now</Button>
+                        <Button className="" >Book Now</Button>
                     </div>
 
-                    <div className=" flex justify-between items-end flex-col  gap-y-2.5">
+                    <div className=" flex justify-between items-end flex-col  gap-y-2.5 flex-wrap">
 
                         <div className="flex gap-2.5">
                             <span className="bg-accent px-7.5 py-2.5 rounded-xl border-1 border-accent">Helpline number: 1800 266 1880 </span>
@@ -111,38 +113,40 @@ const Home = () => {
             {/* Section 3 of Home Page */}
             <section className="flex items-center justify-center w-full h-auto ">
                 <div className="flex items-center justify-center h-auto rounded-2xl w-full bg-cover bg-center text-white p-6" style={{ backgroundImage: `url(${s3banner1})` }}>
-                    <div className="flex items-center flex-col justify-between bg-[#A1A1A1]/40 rounded-2xl p-6 h-full gap-12 w-full" >
-                        <h1>Repair Wala Services Process</h1>
-                        <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
-                            <div className="flex flex-col gap-y-3.5">
-                                <h1>01</h1>
-                                <h1>Book your appointment</h1>
-                                <p>Contact us via phone or online to<br />
-                                    schedule your Repair service.
-                                </p>
+
+                    
+                        <FrezzerBanner banner={s3banner1}>
+                            <h1>Repair Wala Services Process</h1>
+                            <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
+                                <div className="flex flex-col gap-y-3.5">
+                                    <h1>01</h1>
+                                    <h1>Book your appointment</h1>
+                                    <p>Contact us via phone or online to<br />
+                                        schedule your Repair service.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col gap-y-3.5">
+                                    <h1>02</h1>
+                                    <h1>Inspection & service</h1>
+                                    <p>Our certified technicians will <br />
+                                        arrive on time to inspect your <br />
+                                        system.
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col gap-y-3.5">
+                                    <h1>03</h1>
+                                    <h1>Follow-up & support</h1>
+                                    <p>We provide follow-up support <br />
+                                        and ongoing maintenance <br />
+                                        options.
+                                    </p>
+                                </div>
+
                             </div>
+                        </FrezzerBanner>
 
-                            <div className="flex flex-col gap-y-3.5">
-                                <h1>02</h1>
-                                <h1>Inspection & service</h1>
-                                <p>Our certified technicians will <br />
-                                    arrive on time to inspect your <br />
-                                    system.
-                                </p>
-                            </div>
-
-                            <div className="flex flex-col gap-y-3.5">
-                                <h1>03</h1>
-                                <h1>Follow-up & support</h1>
-                                <p>We provide follow-up support <br />
-                                    and ongoing maintenance <br />
-                                    options.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
             </section>
 
@@ -257,9 +261,22 @@ const Home = () => {
 
 
             {/*Section 7 Request Call Back Form Section */}
-            <section className="flex w-full">
+            <section className="flex w-full my-20">
                 <RequestCallbackForm />
             </section>
+
+
+            {/* Section 8 What our client Says About Us (Client Testimonials) */}
+
+            {/* <section className="flex items-center justify-center my-10 flex-col ">
+                    <h1>What Our Clients Say About Us</h1>
+
+                    <div className="w-full flex overflow-x-scroll">
+                        <TestimonialBox/>
+                    </div>
+            
+            </section> */}
+
 
 
         </>

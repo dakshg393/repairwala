@@ -2,17 +2,26 @@ import React from "react";
 import { logo } from "../../assets/Images/index.js";
 import Button from "../MinorComponent/Button";
 import { navItems } from "../../utils/Home.utils";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { User ,AlignLeft,ShoppingCart} from 'lucide-react';
 
 const Header = () => {
     return (
         <>
-
-            <div className="flex md:hidden items-center justify-between py-2 ">
-                <div>g</div>
+{/* Header For Mobile Screen */}
+            <div className="flex md:hidden items-center justify-between py-2  px-4">
+                <div><AlignLeft/></div>
                 <div> <img src={logo} alt="Logo" className="w-38 h-auto" /></div>
-                <div>h</div>
+                <div>
+                    <span className="flex flex-row gap-4">
+                    <User/>
+                    <ShoppingCart/>
+                    </span>
+                    
+                </div>
             </div>
+
+
 
             {/* // Header For DeskTop Screen  */}
             <div className="w-full hidden md:block">
@@ -30,27 +39,28 @@ const Header = () => {
 
                         <div className="flex flex-row ">
                             <span className="flex flex-row border-1  rounded-xl p-2 mx-2">
-                                <select className="pr-2 border-0" id="category" name="category">
+                                <select className="pr-2 border-0 focus:outline-none" id="category" name="category">
                                     <option value="mobile">All Category</option>
                                     <option value="ac">AC Repair</option>
                                     <option value="plumbing">Plumbing</option>
                                     <option value="electrical">Electrical</option>
                                 </select>
-                                <input className="pl-1 border-l-1 focus:border-0" placeholder="Search for products.." />
+                                <input className="pl-1 border-l-1 focus:border-0 focus:outline-none" placeholder="Search for products.." />
 
                             </span>
                             <Button >Search</Button>
                         </div>
                         {/* {left div} */}
-                        <div className="flex items-center justify-center">
-                            <div className="flex ">
-                                <span>Icon</span>
-                                <span><h1>Sign in <br /><span>
+                        <div className="flex items-center justify-center gap-4">
+                            <div className="flex flex-row items-center gap-2">
+                                <span><User/></span>
+                                <span>
+                                    <h1>Sign in <br /><span>
                                     User Account</span></h1>
                                 </span>
 
                             </div>
-                            <div>Cart</div>
+                            <div><ShoppingCart/></div>
                         </div>
 
                     </div>
@@ -62,7 +72,7 @@ const Header = () => {
 
 
                         <div className="flex justify-center items-center ">
-                            <Button>Browse All Categories</Button>
+                            <Button> <AlignLeft/> Browse All Categories</Button>
 
                             <nav className="flex gap-6 text-gray-700 text-sm px-6 ">
                                 {navItems.map((item) => (
@@ -81,7 +91,8 @@ const Header = () => {
                             </nav>
                         </div>
 
-                        <div>
+                        <div className="flex flex-row gap-4 items-center">
+                            <Link>Book Appointment</Link>
                             <Button>Login Employee DashBoard</Button>
                         </div>
 

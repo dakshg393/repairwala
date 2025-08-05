@@ -6,7 +6,7 @@ const CategoriesCard = () => {
     return (
         <div className="w-74 h-83 p-2.5 rounded-2xl flex flex-col bg-accent">
             <div className="w-full h-64 gap-2.5">
-                <img src={talivison} className="h-46 rounded-2xl" />
+                <img src={talivison} className="h-46 rounded-2xl w-full" />
                 <div>
                     <h3>Telivision </h3>
                     <h1>Lcd T.v</h1>
