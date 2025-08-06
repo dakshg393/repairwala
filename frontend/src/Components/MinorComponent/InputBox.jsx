@@ -8,7 +8,7 @@ const InputBox = ({ label, id, register, required = false, type = "text", placeh
                 type={type}
                 placeholder={placeholder}
                 {...register(id, { required })}
-                className="w-full h-full p-2 focus:outline-none bg-accent"
+                className="w-full h-full p-2 focus:outline-none focus:bg-none bg-accent"
             />
             <label
                 htmlFor={id}

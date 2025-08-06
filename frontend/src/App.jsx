@@ -1,6 +1,6 @@
 import './App.css'
 import MainLayout from './Layout/MainLayout'
-import { Home ,Services} from './Pages/index.js'
+import { About, Contact, Home ,Services} from './Pages/index.js'
 import { Routes, Route } from 'react-router-dom'
 function App() {
 
@@ -12,8 +12,9 @@ function App() {
           {/* Routes inside MainLayout */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/about" element={<About />} /> */}
+            <Route path="/aboutus" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/contactus" element={<Contact />} />
           </Route>
 
           {/* Routes outside MainLayout */}

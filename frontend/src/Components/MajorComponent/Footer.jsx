@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="flex  justify-between w-full flex-col md:flex-row gap-12 ">
                     {/* Left Side Div Of Footer Main */}
                     <div className="flex flex-col gap-8.5">
-                        <img src={logo} alt="Logo" />
+                        <img className="max-w-[213px]" src={logo} alt="Logo" />
                         <span>
                             Monday – Friday: 9 AM – 7 PM<br />
                             Saturday: 10 AM – 5 PM

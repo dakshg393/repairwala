@@ -6,7 +6,7 @@ import RequestCallbackForm from "../Components/MajorComponent/RequestCallBackFor
 import FrezzerBanner from "../Components/MinorComponent/FrezzerBanner.jsx";
 import BrandCard from "../Components/MajorComponent/BrandCard.jsx";
 import BasemapImage from "../assets/Images/BasemapImage.png"
-
+import { mainPageTitleBanner } from "../assets/Images/index.js";
 
 const Services = () => {
 
@@ -14,7 +14,7 @@ const Services = () => {
         <>
             <section className={`flex items-center `} >
 
-                <FrezzerBanner banner={s3banner1} insideBoxCss="border-1 border-mushroom justify-center">
+                <FrezzerBanner banner={mainPageTitleBanner} insideBoxCss="border-1 border-mushroom justify-center">
                     <h1>Services</h1>
                 </FrezzerBanner>
 

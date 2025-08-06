@@ -16,10 +16,10 @@ const Home = () => {
             <section className="h-auto flex  justify-center  flex-col gap-10 ">
 
                 {/* Main Banners Main Div */}
-                <div className="flex flex-col md:flex-row  w-full  gap-2.5">
+                <div className="flex flex-col md:flex-row  w-full  gap-5">
 
                     {/* Main Banner Sub Div Bannner 1 */}
-                    <div className="flex p-4 text-white flex-col w-full   md:w-[60%] h-[185px] md:h-[446px] bg-cover bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
+                    <div className="flex p-4 text-white flex-col w-full flex-wrap  md:w-[60%] h-[273px] md:h-[446px] bg-cover bg-no-repeat bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
                         <h1 className="font-heading ">We Bring Your <br />
                             Home Appliances Back to Life
                         </h1>
@@ -27,7 +27,7 @@ const Home = () => {
                     </div>
 
                     {/* Main Banner Sub Div 2  */}
-                    <div className="flex flex-col w-full md:w-[40%] gap-y-2  md:h-[446px]">
+                    <div className="flex flex-col w-full md:w-[40%] gap-y-2.5  md:h-[446px]">
                         {/* Sub div 2 Banner 1 */}
                         <div className="w-full h[185px] bg-cover bg-center rounded-2xl text-white p-4 md:h-1/2 " style={{ backgroundImage: `url(${s1Sidebanner1})` }}>
                             <p className="pb-4">Your Local Appliance Repair Service Expert</p>

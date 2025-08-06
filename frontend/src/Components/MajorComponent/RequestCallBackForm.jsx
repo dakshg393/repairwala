@@ -57,7 +57,7 @@ const RequestCallbackForm = ({ className }) => {
                         </span>
                         <span className="flex flex-row gap-[26px] w-full">
                             <InputBox label="Email" id="email" placeholder="Enter  E-Mail" register={register} required={true} type="email" className={'w-1/2'} />
-                            <InputBox label="Phone Number" id="phoneNo" placeholder="Enter  Phone Number" register={register} required={true} type="Number" className={'w-1/2'} />
+                            <InputBox label="Phone Number" id="phoneNo" placeholder="Enter  Phone Number" register={register} required={true} type="number" className={'w-1/2'} />
 
                         </span>
 
@@ -72,7 +72,7 @@ const RequestCallbackForm = ({ className }) => {
                             <SelectBox label="City" id="city" register={register} options={["Delhi", "Mumbai", "Bhopal", "Indore"]} />
                             <SelectBox label="State" id="state" register={register} options={["DH", "MH", "UP", "Mp"]} />
                         </span>
-                        <InputBox label="Postal/Zip Code" id="zipCode" placeholder="Enter Postal / Zip Code" register={register} required={true} type="Number" className={''} />
+                        <InputBox label="Postal/Zip Code" id="zipCode" placeholder="Enter Postal / Zip Code" register={register} required={true} type="number" className={''} />
 
                     </div>
 
@@ -88,7 +88,7 @@ const RequestCallbackForm = ({ className }) => {
                         </span>
                         <span className="flex flex-row gap-[26px] " >
                             <SelectBox label="Model" id="model" register={register} options={["Solo MicroWave", "GrillMicroWave"]} />
-                            <InputBox label="Appliance Age" id="applianceAge" placeholder="Enter Age of Appliances" register={register} required={true} type="Number" className={''} />
+                            <InputBox label="Appliance Age" id="applianceAge" placeholder="Enter Age of Appliances" register={register} required={true} type="number" className={''} />
 
                         </span>
 
