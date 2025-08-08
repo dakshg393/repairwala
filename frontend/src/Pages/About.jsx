@@ -5,6 +5,7 @@ import BrandCard from "../Components/MajorComponent/BrandCard.jsx";
 import { mainPageTitleBanner } from "../assets/Images/index.js";
 import s2banner1 from "../assets/Images/About/s2banner1.png";
 import s2banner2 from "../assets/Images/About/s2banner2.png";
+import { ToolCase } from "lucide-react";
 
 
 const About = () => {
@@ -14,7 +15,7 @@ const About = () => {
             <section className={`flex items-center flex-col`} >
 
                 <FrezzerBanner banner={mainPageTitleBanner} insideBoxCss="border-1 border-mushroom justify-center">
-                    <h1>About Us</h1>
+                    <h1 className="text-[52px] font-heading font-medium text-black">About Us</h1>
                 </FrezzerBanner>
 
 
@@ -22,18 +23,18 @@ const About = () => {
 
 
             {/* Brand banner and other image Poster*/}
-            <section className="w-full my-20 flex flex-col gap-10">
+            <section className="w-full my-20 flex flex-col  gap-[100px]">
 
 
                 {/* First Image + Text div on About Page */}
-                <div className="flex items-center flex-col-reverse md:flex-row w-full gap-7  justify-between">
+                <div className="flex items-center flex-col-reverse md:flex-row w-full   justify-between">
 
                     <div className="w-full md:w-1/2 h-full">
                         <img src={s2banner1} alt="s2banner1" />
                     </div>
-                    <div className="flex flex-col w-full md:w-1/2 gap-3 ">
-                        <h1>India’s Trusted RepairWala Services Provider</h1>
-                        <p>RepairWala is a trusted service platform founded in 2020, specializing in home appliance repairs. With 5 years of experience, we offer convenient, on-site repair services for Television, A/C, Window A/C, Refrigerators, Washing Machine, Water Purifier Microwave Ovens, and more. Our services also include painting and pest control, making us your one-stop solution for all home repair needs.</p>
+                    <div className="flex flex-col w-full md:w-1/2 gap-[15px] ">
+                        <h1 className="font-para text-heading font-semibold text-primary-text ">India’s Trusted RepairWala Services Provider</h1>
+                        <p className="font-normal font-para text-para text-primary-text">RepairWala is a trusted service platform founded in 2020, specializing in home appliance repairs. With 5 years of experience, we offer convenient, on-site repair services for Television, A/C, Window A/C, Refrigerators, Washing Machine, Water Purifier Microwave Ovens, and more. Our services also include painting and pest control, making us your one-stop solution for all home repair needs.</p>
                     </div>
 
                 </div>
@@ -43,19 +44,71 @@ const About = () => {
                 <div className="flex flex-col md:flex-row w-full gap-7 justify-between ">
 
                     {/* Left Side Div */}
-                    <div className="flex items-center flex-col w-full md:w-1/2 gap-3">
+                    <div className="flex items-center flex-col w-full md:w-1/2 gap-[15px]">
 
                         {/* Title and sicription div */}
                         <div className="flex flex-col gap-3 order-1 md:order-1 ">
-                            <h1>Why RepairWala?</h1>
-                            <p>RepairWala offers Skilled, Experienced and Certified Technicians who specialize in repairing and servicing home appliances from all brands, ensuring timely and convenient service delivery.</p>
+                            <h1 className="font-para text-heading font-semibold text-primary-text" >Why RepairWala?</h1>
+                            <p className="font-normal font-para text-para text-primary-text">RepairWala offers Skilled, Experienced and Certified Technicians who specialize in repairing and servicing home appliances from all brands, ensuring timely and convenient service delivery.</p>
                         </div>
 
                         {/* Icons Div */}
-                        <div className="order-3 md:order-2 ">
+                        <div className="flex gap-10 flex-wrap w-full">
+
+                            <div className="flex flex-row flex-wrap gap-auto">
+                                <div className="max-h-[137px] max-w-[194px] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
+                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
+                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
 
 
-icons
+                            </div>
+
+  <div className="flex flex-row flex-wrap gap-auto">
+                                <div className="max-h-[137px] max-w-[194px] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
+                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
+                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
+                                        <ToolCase className="size-[35px]    " />
+                                    </span>
+                                    <h1>Risk Free Services</h1>
+
+                                </div>
+
+
+                            </div>
+
+
+
                         </div>
 
 

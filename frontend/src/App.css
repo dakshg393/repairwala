@@ -1,13 +1,38 @@
 @import "tailwindcss";
 
-@theme {
-   --font-heading: "ABCRepro";
-   --font-para: "Inter";
-  --color-primary: #586082;       /* nocturnal  */
-  --color-secondary: #3b5465;     /* mediterra  */
-  --color-accent: #9FBABA;        /* ocean fog  */
-  --color-mushroom: #D3B99E;         /* mushroom   */
-  --color-warm: #9a8277;          /* potter's   */
-  --color-linen: #f7f3e9;         /* white lin  */
-}
 
+
+@import "@fontsource/poppins"; 
+@import "@fontsource/inter"; /*default 400 */
+
+
+@theme {
+
+  --font-heading: "Poppins" ,sans-serif;
+  /*ABCReepro   {Poppins is at the Place of ABC Repro Font}*/
+  --font-para: "Inter", sans-serif;
+  /*Inter*/
+
+  /* Font Size */
+  --text-heading: 32px;
+  --text-para: 18px;
+
+
+  --color-primary-text: #575757;
+
+  --color-primary: #586082;
+  /* nocturnal  */
+  --color-secondary: #3b5465;
+  /* mediterra  */
+  --color-accent: #9FBABA;
+  /* ocean fog  */
+  --color-mushroom: #D3B99E;
+  /* mushroom   */
+  --color-warm: #9a8277;
+  /* potter's   */
+  --color-linen: #f7f3e9;
+  /* white lin  */
+
+
+
+}

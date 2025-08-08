@@ -13,7 +13,7 @@ const Contact = () => {
             <section className={`flex items-center `} >
 
                 <FrezzerBanner banner={mainPageTitleBanner} insideBoxCss="border-1 border-mushroom justify-center">
-                    <h1>Contact Us</h1>
+                    <h1 className="text-[52px] font-heading font-medium text-black">Contact Us</h1>
                 </FrezzerBanner>
 
             </section>

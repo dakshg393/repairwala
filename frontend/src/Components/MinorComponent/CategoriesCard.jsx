@@ -8,8 +8,8 @@ const CategoriesCard = () => {
             <div className="w-full h-64 gap-2.5">
                 <img src={talivison} className="h-46 rounded-2xl w-full" />
                 <div>
-                    <h3>Telivision </h3>
-                    <h1>Lcd T.v</h1>
+                    <h3 className="font-heading text-para">Telivision </h3>
+                    <h1 className="font-heading font-medium text-[24px]">Lcd T.v</h1>
                 </div>
 
             </div>

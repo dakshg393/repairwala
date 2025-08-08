@@ -15,7 +15,7 @@ const Services = () => {
             <section className={`flex items-center `} >
 
                 <FrezzerBanner banner={mainPageTitleBanner} insideBoxCss="border-1 border-mushroom justify-center">
-                    <h1>Services</h1>
+                    <h1 className="text-[52px] font-heading font-medium text-black">Services</h1>
                 </FrezzerBanner>
 
             </section>
@@ -31,8 +31,8 @@ const Services = () => {
 
                 {/*  Map Div */}
                 <div className="flex flex-col gap-7 items-center h-[390px] md:h-[376px] bg-center bg-cover bg-no-repeat rounded-2xl pt-10 " style={{ backgroundImage: `url(${BasemapImage})` }}>
-                    <h1>Areas We Services</h1>
-                    <p>We offer wide range of services to all major locations</p>
+                    <h1 className="font-heading font-bold text-[42px] text-primary">Areas We Services</h1>
+                    <p className="text-primary-text font-para font-normal text-[24px]">We offer wide range of services to all major locations</p>
                 </div>
 
             </section>

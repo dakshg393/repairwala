@@ -32,7 +32,7 @@ const RequestCallbackForm = ({ className }) => {
                 />
 
                 {/* Text at bottom of image */}
-                <div className="absolute bottom-4  text-white text-lg font-semibold p-10 rounded w-full text-center">
+                <div className="absolute bottom-4  text-white text-lg font-medium p-10 rounded w-full text-center text-[28px] font-heading">
                     Repair Wala Service repairs your home appliaces
                 </div>
             </div>
@@ -44,7 +44,7 @@ const RequestCallbackForm = ({ className }) => {
             <div className="flex-1 bg-accent p-8 w-auto rounded-2xl">
 
                 <form className="flex w-full  flex-col gap-[36px]">
-                    <h1>Fill the Form to <br />
+                    <h1 className="font-medium font-heading text-[32px] text-primary">Fill the Form to <br />
                         Request Free Call Back
                     </h1>
 
@@ -64,7 +64,7 @@ const RequestCallbackForm = ({ className }) => {
                     </div>
 
                     {/* Service Location Address Div Box*/}
-                    <h1>Service Location Address</h1>
+                    <h1 className="font-medium font-heading text-[20px] text-primary">Service Location Address</h1>
                     <div className="flex flex-col gap-[20px]">
                         <InputBox label="Stress Address" id="stressAddress" placeholder="Enter Address (Flat no., Building No., Landmarks)" register={register} required={true} type="text" className={'w-full'} />
 
@@ -77,7 +77,7 @@ const RequestCallbackForm = ({ className }) => {
                     </div>
 
                     {/* Product Details div Box */}
-                    <h1>Product Details</h1>
+                    <h1 className="font-medium font-heading text-[20px] text-primary">Product Details</h1>
 
                     <div className="flex flex-col gap-[20px]">
 

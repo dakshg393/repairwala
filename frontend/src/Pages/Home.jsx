@@ -19,34 +19,41 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row  w-full  gap-5">
 
                     {/* Main Banner Sub Div Bannner 1 */}
-                    <div className="flex p-4 text-white flex-col w-full flex-wrap  md:w-[60%] h-[273px] md:h-[446px] bg-cover bg-no-repeat bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
-                        <h1 className="font-heading ">We Bring Your <br />
+                    <div className="flex p-4 text-white flex-col gap-[15px] w-full flex-wrap  md:w-[60%] h-[273px] md:h-[446px] bg-cover bg-no-repeat bg-center rounded-2xl" style={{ backgroundImage: `url(${s1banner1})` }} >
+                        <h1 className="font-heading font-medium text-[26px]">We Bring Your <br />
                             Home Appliances Back to Life
                         </h1>
-                        <p className="font-para">We are Committed to Provide you a <br /> Safe Service Experience</p>
+                        <p className="font-para font-light text-para ">We are Committed to Provide you a <br /> Safe Service Experience</p>
                     </div>
 
                     {/* Main Banner Sub Div 2  */}
                     <div className="flex flex-col w-full md:w-[40%] gap-y-2.5  md:h-[446px]">
                         {/* Sub div 2 Banner 1 */}
-                        <div className="w-full h[185px] bg-cover bg-center rounded-2xl text-white p-4 md:h-1/2 " style={{ backgroundImage: `url(${s1Sidebanner1})` }}>
-                            <p className="pb-4">Your Local Appliance Repair Service Expert</p>
-                            <h1 className="pb-4">Skilled, Affordable Service <br />
-                                on Your Schedule</h1>
+                        <div className="flex flex-col justify-between w-full h[185px] bg-cover bg-center rounded-2xl text-white p-4 md:h-1/2 " style={{ backgroundImage: `url(${s1Sidebanner1})` }}>
+                            <p className="pb-4 font-para font-light text-[14px]">Your Local Appliance Repair Service Expert</p>
+                            <h1 className="pb-4 font-bold text-[24px] ">Skilled, Affordable Service <br />
+                            on Your Schedule
+                            </h1>
                             <Button>Book Appointment</Button>
                         </div>
                         {/* sub Div2 Banner 2 */}
-                        <div className="w-full  bg-cover bg-center rounded-2xl text-white p-4 h-[185px] md:h-1/2" style={{ backgroundImage: `url(${s1Sidebanner2})` }}>
-                            <p className="bottom-0">Home Appliances <br />
+                        <div
+                            className="w-full bg-cover bg-center rounded-2xl text-white p-4 h-[185px] md:h-1/2 relative"
+                            style={{ backgroundImage: `url(${s1Sidebanner2})` }}
+                        >
+                            <p className="absolute bottom-4 font-para font-medium text-para">
+                                Home Appliances <br />
                                 Repair & Installation Services <br />
-                                in Indore</p>
+                                in Indore
+                            </p>
                         </div>
+
                     </div>
 
                 </div>
 
                 {/* Categories Div in Section 1 Below Banner Div */}
-                <div className="flex items-center justify-center gap-x-12 h-60 w-full overflow-x-auto overflow-y-hidden  scrollbar-hide">
+                <div className="flex items-center lg:justify-center gap-x-12 h-60 w-full overflow-x-auto overflow-y-hidden  scrollbar-hide">
 
                     {/* Categories List under Catergories div */}
                     {categories.map((categorie, idx) => (
@@ -57,7 +64,7 @@ const Home = () => {
                             <span className="w-full h-[70%] flex justify-center items-center">
                                 <img className="max-h-full object-contain" src={categorie.image} alt={categorie.name} />
                             </span>
-                            <span className="bg-accent w-full h-[30%] flex justify-center items-center text-center text-sm">
+                            <span className="bg-accent w-full h-[30%] flex justify-center items-center text-center text-[16px] font-heading font-normal text-black">
                                 {categorie.name}
                             </span>
                         </div>
@@ -74,15 +81,15 @@ const Home = () => {
 
                 <div className=" w-full flex itesms-center justify-between md:h-auto flex-col md:flex-row gap-8 " >
 
-                    <div className="flex items-start justify-between flex-row md:flex-col w-full md:w-auto ">
-                        <span><h1>The key to a long lasting <br />
-                            relationship is communication</h1>
-                            <h1>Multiple ways to reach us.</h1>
+                    <div className="flex items-center md:items-start justify-between flex-row md:flex-col w-full md:w-auto gap-4">
+                        <span><h1 className="font-heading font-bold text-[28px] text-primary-text">The key to a long lasting <br />
+                            relationship is <b>communication</b></h1>
+                            <h1 className="font-normal font-heading text-para text-primary-text">Multiple ways to reach us.</h1>
                         </span>
                         <Button className="" >Book Now</Button>
                     </div>
 
-                    <div className=" flex justify-between items-end flex-col  gap-y-2.5 flex-wrap">
+                    <div className=" flex justify-between items-end flex-col  gap-y-2.5 flex-wrap font-heading font-normal text-[16px] ">
 
                         <div className="flex gap-2.5">
                             <span className="bg-accent px-7.5 py-2.5 rounded-xl border-1 border-accent">Helpline number: 1800 266 1880 </span>
@@ -114,38 +121,38 @@ const Home = () => {
             <section className="flex items-center justify-center w-full h-auto ">
                 <div className="flex items-center justify-center h-auto rounded-2xl w-full bg-cover bg-center text-white p-6" style={{ backgroundImage: `url(${s3banner1})` }}>
 
-                    
-                        <FrezzerBanner banner={s3banner1}>
-                            <h1>Repair Wala Services Process</h1>
-                            <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
-                                <div className="flex flex-col gap-y-3.5">
-                                    <h1>01</h1>
-                                    <h1>Book your appointment</h1>
-                                    <p>Contact us via phone or online to<br />
-                                        schedule your Repair service.
-                                    </p>
-                                </div>
 
-                                <div className="flex flex-col gap-y-3.5">
-                                    <h1>02</h1>
-                                    <h1>Inspection & service</h1>
-                                    <p>Our certified technicians will <br />
-                                        arrive on time to inspect your <br />
-                                        system.
-                                    </p>
-                                </div>
-
-                                <div className="flex flex-col gap-y-3.5">
-                                    <h1>03</h1>
-                                    <h1>Follow-up & support</h1>
-                                    <p>We provide follow-up support <br />
-                                        and ongoing maintenance <br />
-                                        options.
-                                    </p>
-                                </div>
-
+                    <FrezzerBanner banner={s3banner1} insideBoxCss={"sm:4 md:p-6"}>
+                        <h1 className="font-heading font-medium text-heading">Repair Wala Services Process</h1>
+                        <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1 className="font-bold font-heading text-[36px]">01</h1>
+                                <h1 className="font-medium font-heading text-[24px]" >Book your appointment</h1>
+                                <p className="font-normal font-para text-para ">Contact us via phone or online to<br />
+                                    schedule your Repair service.
+                                </p>
                             </div>
-                        </FrezzerBanner>
+
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1 className="font-bold font-heading text-[36px]">02</h1>
+                                <h1 className="font-medium font-heading text-[24px]">Inspection & service</h1>
+                                <p className="font-normal font-para text-para ">Our certified technicians will <br />
+                                    arrive on time to inspect your <br />
+                                    system.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col gap-y-3.5">
+                                <h1 className="font-bold font-heading text-[36px]">03</h1>
+                                <h1 className="font-medium font-heading text-[24px]">Follow-up & support</h1>
+                                <p className="font-normal font-para text-para ">We provide follow-up support <br />
+                                    and ongoing maintenance <br />
+                                    options.
+                                </p>
+                            </div>
+
+                        </div>
+                    </FrezzerBanner>
 
                 </div>
             </section>
@@ -179,19 +186,19 @@ const Home = () => {
                         <div className="flex justify-between h-full gap-[30px] flex-col">
 
                             <div className="flex gap-[15px] flex-col">
-                                <h1>A Worthy Appliances Repair Company</h1>
-                                <p>Our expert Appliances Repair are available 24/7 to fix any
+                                <h1 className="font-para font-semibold text-primary-text text-[28px] ">A Worthy Appliances Repair Company</h1>
+                                <p className="font-para font-normal text-primary-text text-para">Our expert Appliances Repair are available 24/7 to fix any
                                     Appliances issue,Whether it’s repairing a leak, unclogging a drain, or
                                     servicing your water heater. We Guarantee accurate service on the
                                     initial visit. </p>
                             </div>
 
-                            <div className="flex border-1 border-accent rounded-2xl p-5 flex-col gap-[30px]">
+                            <div className="flex border-1 border-accent rounded-2xl p-5 flex-col gap-[30px] text-primary-text">
                                 <div className="flex flex-row gap-8">
                                     <img src={s5banner4} alt="s5banner4" />
                                     <span className="flex flex-col gap-1.5">
-                                        <h1>Satisfaction Guaranteed</h1>
-                                        <p>Our team of experienced repair is prepared to<br />
+                                        <h1 className="font-para font-semibold text-para">Satisfaction Guaranteed</h1>
+                                        <p className="font-normal font-para text-[14px] ">Our team of experienced repair is prepared to<br />
                                             tackle a variety of appliances repair problem</p>
                                     </span>
                                 </div>
@@ -199,8 +206,8 @@ const Home = () => {
                                 <div className="flex flex-row gap-8">
                                     <img src={s5banner5} alt="s5banner5" />
                                     <span className="flex flex-col gap-1.5">
-                                        <h1>Trusted and Reliable</h1>
-                                        <p>Our team of experienced repair is prepared to <br />
+                                        <h1 className="font-para font-semibold text-para">Trusted and Reliable</h1>
+                                        <p className="font-normal font-para text-[14px] ">Our team of experienced repair is prepared to <br />
                                             tackle a variety of appliances repair problem</p>
                                     </span>
                                 </div>
@@ -226,7 +233,7 @@ const Home = () => {
             <section className="flex items-center flex-col justify-center w-full my-20 gap-10" >
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-6 md:gap-[50px]">
                     {/* Title */}
-                    <div className="text-[28px] font-semibold leading-tight">
+                    <div className="  leading-tight text-primary-text text-[42px] font-para font-semibold ">
                         <div className="block md:hidden">RepairWala Partner Program</div>
                         <div className="hidden md:block">
                             <div>RepairWala</div>
@@ -235,7 +242,7 @@ const Home = () => {
                     </div>
 
                     {/* Description */}
-                    <div className="text-sm md:max-w-2xl">
+                    <div className="text-sm md:max-w-2xl text-primary-text font-para text-[14px]">
                         We are excited to invite you to join our trusted partner as a Repairwala Technician.
                         This opportunity offers hands-on experience with a wide range of household appliances,
                         working alongside a skilled and supportive team. If you have a passion for troubleshooting,

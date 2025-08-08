@@ -8,9 +8,9 @@ const BrandCard = ({ className }) => {
 
             {/* Brand Text Card */}
             <div className="h-full w-full md:w-fit">
-                <span className="flex flex-row   md:flex-col items-center md:items-start justify-between w-full md:w-auto">
-                    <h1>BRANDS</h1>
-                    <p>Any Make - Any Brand - We Have The Technicians For <br />
+                <span className="flex flex-row gap-[20px]  md:flex-col items-center md:items-start justify-between w-full md:w-auto">
+                    <h1 className="text-heading font-heading font-medium">BRANDS</h1>
+                    <p className="text-para font-normal font-para text-primary-text">Any Make - Any Brand - We Have The Technicians For <br />
                         Providing Repairing Solutions. </p>
                 </span>
 
