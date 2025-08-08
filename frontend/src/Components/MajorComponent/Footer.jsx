@@ -5,6 +5,7 @@ import Button from "../MinorComponent/Button";
 import logo from "../../assets/Images/Logo.png";
 import footerBg from "../../assets/Images/FooterBg.png"
 import { ArrowUp, Instagram } from "lucide-react";
+import SocialMediaBox from "../MinorComponent/SocialIconsBox";
 
 const Footer = () => {
     return (
@@ -33,10 +34,7 @@ const Footer = () => {
                             Saturday: 10 AM – 5 PM
                         </span>
                         <span className="flex flex-row">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <SocialMediaBox />
                         </span>
                     </div>
 

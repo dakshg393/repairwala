@@ -4,6 +4,9 @@ import InputBox from "../MinorComponent/InputBox";
 import TextAreaBox from "../MinorComponent/TextAreaBox";
 import Button from "../MinorComponent/Button";
 import baseMapImage from "../../assets/Images/BasemapImage.png"
+import SocialMediaBox from "../MinorComponent/SocialIconsBox";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 const ContactUsCard = ({ className }) => {
     const {
@@ -30,10 +33,35 @@ const ContactUsCard = ({ className }) => {
                     className="w-full  object-cover rounded-2xl h-[390px] md:h-[683px] md:max-w-[499px]"
                 />
 
-                {/* Text at bottom of image */}
-                <div className="  ">
-                    <span></span>
-                    <span></span>
+                {/* Text at bottom of image Contect no and Social media icons and links */}
+                <div className="flex flex-col mt-10 gap-5 w-full ">
+                    <span className="flex flex-col gap-4">
+                        <h1>// Contact us</h1>
+
+                        <span className="flex items-center  flex-row">
+                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="size-[34px] rounded-full p-1 bg-accent flex items-center justify-center flex-row">
+                                <FaPhoneAlt className="text-primary" size={18} />
+                            </a>
+                            <h1>+1(135)658-9856</h1>
+                        </span>
+
+                        <span className="flex items-center  flex-row" >
+                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="size-[34px] rounded-full p-1 bg-accent flex items-center justify-center">
+                                <IoIosMail className="text-primary" size={18} />
+
+                            </a>
+                            <h1>hello@example.com</h1>
+                        </span>
+
+                    </span>
+
+
+                    <span className="flex flex-col gap-5">
+
+                        <h1> // Social Media </h1>
+                        <SocialMediaBox />
+                    </span>
+
                 </div>
             </div>
 
@@ -112,7 +140,7 @@ const ContactUsCard = ({ className }) => {
                                 />
                                 I'm neither
                             </label>
-                            </span>
+                        </span>
                         <span>
                             <TextAreaBox label={"Comments"} id="comments" placeholder="Enter...." register={register} />
                         </span>

@@ -3,8 +3,8 @@ import React from "react";
 import FrezzerBanner from "../Components/MinorComponent/FrezzerBanner.jsx";
 import BrandCard from "../Components/MajorComponent/BrandCard.jsx";
 import { mainPageTitleBanner } from "../assets/Images/index.js";
-import  s2banner1  from "../assets/Images/About/s2banner1.png";
-import  s2banner2  from "../assets/Images/About/s2banner2.png";
+import s2banner1 from "../assets/Images/About/s2banner1.png";
+import s2banner2 from "../assets/Images/About/s2banner2.png";
 
 
 const About = () => {
@@ -52,9 +52,13 @@ const About = () => {
                         </div>
 
                         {/* Icons Div */}
-                        <div className="order-3 md:order-2">
-                            icons
+                        <div className="order-3 md:order-2 ">
+
+
+icons
                         </div>
+
+
                     </div>
 
                     {/* Side Image div on md and below image div on Small */}
