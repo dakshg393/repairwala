@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { logo, MobileNavBanner } from "../../assets/Images/index.js";
+import React, { use, useState } from "react";
+import { CategoriesDivBanner, logo, MobileNavBanner } from "../../assets/Images/index.js";
 import Button from "../MinorComponent/Button";
-import { mobileNavItems, navItems } from "../../utils/Home.utils";
+import { categories, mobileNavItems, navItems } from "../../utils/Home.utils";
 import { Link, NavLink } from "react-router-dom";
 import { User, AlignLeft, ShoppingCart } from 'lucide-react';
 
@@ -9,7 +9,7 @@ const Header = () => {
 
     const [sideNav, setSideNav] = useState(false)
     const [cart, setCart] = useState(false)
-
+    const [browseCategories, setBrowseCategories] = useState(false)
 
     return (
         <>
@@ -19,7 +19,7 @@ const Header = () => {
             <div className="flex md:hidden items-center justify-between py-2  px-4  ">
                 <div className="relative"><span onClick={() => setSideNav(!sideNav)}><AlignLeft /></span>
                     {sideNav &&
-                        <div className=" left-0 top-0 w-[298px] h-screen bg-[#E8E8E8] shadow-lg z-50 fixed rounded-br-2xl rounded-tr-2xl ">
+                        <div className=" left-0 top-0 w-[298px] h-screen bg-[#FFFF] shadow-lg z-50 fixed rounded-br-2xl rounded-tr-2xl ">
                             <div>
                                 <div className="flex flex-col">
                                     <div className="flex justify-end">
@@ -64,7 +64,7 @@ const Header = () => {
                 <div>
                     <span className="flex flex-row gap-4">
                         <span className="cursor-pointer"><User /></span>
-                        <span className="cursor-pointer" onClick={()=>setCart(!cart)}><ShoppingCart /></span>
+                        <span className="cursor-pointer" onClick={() => setCart(!cart)}><ShoppingCart /></span>
                     </span>
 
                 </div>
@@ -115,7 +115,7 @@ const Header = () => {
                                 </span>
 
                             </div>
-                            <span className="cursor-pointer" onClick={()=>setCart(!cart)}><ShoppingCart /></span>
+                            <span className="cursor-pointer" onClick={() => setCart(!cart)}><ShoppingCart /></span>
                         </div>
 
                     </div>
@@ -127,7 +127,28 @@ const Header = () => {
 
 
                         <div className="flex justify-center items-center text-[14px]">
-                            <Button className="text-[14px] font-para font-normal "> <AlignLeft /> Browse All Categories</Button>
+                            <Button onClick={()=>setBrowseCategories(!browseCategories)} className="text-[14px] font-para font-normal relative"> <AlignLeft /> Browse All Categories</Button>
+
+
+                            {/* Categories Div When User CLick on Browse All Categories */}
+                            {browseCategories &&
+                                <div className="hidden md:flex flex-col  p-[10px]  absolute top-48 left-10 w-[268px]  rounded-[20px] bg-white gap-[4px]">
+                                    <div className="flex flex-col gap-[4px]">
+                                        {categories.map((categorie) => (
+                                            <Link className="hover:bg-accent h-[44px] w-[248px] flex items-center rounded-xl" to={'/'}>{categorie.name}</Link>
+                                        ))}
+
+                                    </div>
+                                    <div className="w-[248px] h-[203px] rounded-[20px]">
+                                        <img src={CategoriesDivBanner} alt="CategoriesDivBanner" className="w-[248px] h-[203px]" />
+                                    </div>
+
+                                </div>
+
+                            }
+
+
+
 
                             <nav className="flex gap-6 text-secondary text-sm px-6 font-medium ">
                                 {navItems.map((item) => (
@@ -148,16 +169,12 @@ const Header = () => {
 
                         <div className="flex flex-row gap-4 items-center text-[12px] font-para font-bold ">
                             <Link >Book Appointment</Link>
-                            <Button>Login Employee DashBoard</Button>
+                            <Button className="font-bold">Login Employee DashBoard</Button>
                         </div>
-
-
 
                     </div>
 
                 </div>
-
-
 
             </div>
 
@@ -167,17 +184,23 @@ const Header = () => {
             {/* Cart Where User Products display */}
 
             {cart &&
-                <div className=" right-0 top-0 w-[298px] h-screen bg-[#E8E8E8] shadow-lg z-50 fixed rounded-bl-2xl rounded-tl-2xl  flex flex-col justify-between p-2">
-
-
-                    {/* upper div of Cart                          */}
-                    <div className="w-full">
+                <div className=" right-0 top-0 w-[298px] h-screen bg-[#FFFF] shadow-lg z-50 fixed rounded-bl-2xl rounded-tl-2xl  flex flex-col justify-between p-2">
+                    {/* upper div of Cart        that include hading and cart items                 */}
+                    <div className="w-full gap-[34px] flex flex-col ">
                         <div className="flex flex-row justify-between w-full">
                             <span>Appliances Repair cart </span>
                             <span className="cursor-pointer " onClick={() => setCart(!cart)}>Close X</span>
                         </div>
-                        <div className="flex flex-col">
-                            <Link>
+
+                        <div className="flex flex-col gap-[15px]">
+                            <Link className="flex flex-row items-center gap-[10px] p-[7px]">
+                                <img src="" alt="cart Image" />
+                                <span>
+                                    <h1>Refrigrator</h1>
+                                    <h3>13-11-25</h3>
+                                </span>
+                            </Link>
+                            <Link className="flex flex-row items-center gap-[10px] p-[7px]">
                                 <img src="" alt="cart Image" />
                                 <span>
                                     <h1>Refrigrator</h1>
@@ -187,15 +210,24 @@ const Header = () => {
 
                         </div>
                     </div>
-                    <div className="p-4">
-                        <Button className="bg-white">View Cart</Button>
-                        <Button className="">Checkout</Button>
+                    <div className="p-4 flex flex-col w-full gap-[8px]">
+                        <button className="bg-[#F7F7F7] w-full">View Cart</button>
+                        <button className="bg-primary w-full">CheckOut</button>
+
                     </div>
-
-
                 </div>
-
             }
+
+
+
+
+
+
+
+
+            <div>
+
+            </div>
 
         </>
     );
