@@ -7,8 +7,13 @@ import ServiceCard from "../Components/MajorComponent/ServiceCard.jsx";
 import RequestCallbackForm from "../Components/MajorComponent/RequestCallBackForm.jsx";
 import TestimonialBox from "../Components/MajorComponent/TestimonialBox.jsx";
 import FrezzerBanner from "../Components/MinorComponent/FrezzerBanner.jsx";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Home = () => {
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -34,7 +39,7 @@ const Home = () => {
                             <h1 className="pb-4 font-bold text-[24px] ">Skilled, Affordable Service <br />
                             on Your Schedule
                             </h1>
-                            <Button>Book Appointment</Button>
+                            <Button onClick={()=>navigate('/appointment')}>Book Appointment</Button>
                         </div>
                         {/* sub Div2 Banner 2 */}
                         <div

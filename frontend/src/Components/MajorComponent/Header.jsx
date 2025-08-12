@@ -107,12 +107,12 @@ const Header = () => {
                         {/* {left div} */}
                         <div className="flex items-center justify-center gap-4">
                             <div className="flex flex-row items-center gap-2">
-                                <span><User /></span>
-                                <span>
+                                <Link to={'/profile'}><User /></Link>
+                                <Link to={'/login'}>
                                     <h1 className="text-[14px] font-para font-light ">Sign in <br />
                                         <span className="text-[16px] font-para font-semibold "> User Account</span>
                                     </h1>
-                                </span>
+                                </Link>
 
                             </div>
                             <span className="cursor-pointer" onClick={() => setCart(!cart)}><ShoppingCart /></span>
