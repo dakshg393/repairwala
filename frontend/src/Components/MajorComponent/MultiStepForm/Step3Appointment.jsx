@@ -7,16 +7,21 @@ const Step3Appointment = ({register}) => {
     return (
 
         <div className="flex flex-col   gap-[40px] w-full h-full">
-            <h1 className="text-center">Book Appointment</h1>
-            <span className="flex flex-row gap-[29px]">
-                <InputBox id={"firstname"} label={"First Name"} type="text" placeholder=" Enter First Name" bg="bg-[#E5F2F2]" register={register} required />
-                <InputBox id={"lastname"} label={"Last Name"} type="text" placeholder=" Enter First Name" bg="bg-[#E5F2F2]" register={register} required />
-            </span>
-            <InputBox id={"phonenumber"} label={"Phone Number"} type="text" placeholder=" Enter Phone Number" bg="bg-[#E5F2F2]" register={register} required />
-            <InputBox id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-[#E5F2F2]" required />
+            <h1 className="text-center">Address Details</h1>
 
-            <h1>Click Next & You Required Services</h1>
+              <InputBox id={"stress"} label={"Stress Address "} type="text" placeholder=" Enter Address (Flat no., Building No., Landmarks)" bg="bg-[#E5F2F2]" register={register} required />
+              <InputBox id={"stress2"} label={"Stress Address "} type="text" placeholder=" Enter Address (Flat no., Building No., Landmarks)" bg="bg-[#E5F2F2]" register={register} required />
+             
+            
+            <span className="flex flex-row gap-[29px]">
+                <InputBox id={"city"} label={"City"} type="text" placeholder="Enter City" bg="bg-[#E5F2F2]" register={register} required />
+                <InputBox id={"state"} label={"State"} type="text" placeholder=" Enter  State" bg="bg-[#E5F2F2]" register={register} required />
+            </span>
+            <InputBox id={"Poatel"} label={"Postel / Zip Code"} type="text" placeholder=" Enter Phone Number" bg="bg-[#E5F2F2]" register={register} required />
+            
+            <span><h1>Click Next & You Required Services</h1>
             <h1>Note: Services Available Cities are Indore</h1>
+            </span>
         </div>
     )
 }

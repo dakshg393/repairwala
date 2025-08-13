@@ -1,8 +1,8 @@
 import React from "react";
 
-const TextAreaBox = ({ label, id, register, required = false, type = "text", placeholder="", className }) => {
+const TextAreaBox = ({ label, id, register, required = false, type = "text", placeholder="", className ,bg="bg-accent"}) => {
     return (
-        <div className={`relative bg-accent  w-auto border-1 rounded-xl p-2 ${className}`}>
+        <div className={`relative   w-auto border-1 rounded-xl p-2 ${className} ${bg}`}>
             <textarea 
                 id={id}
                 type={type}
@@ -12,7 +12,7 @@ const TextAreaBox = ({ label, id, register, required = false, type = "text", pla
             />
             <label
                 htmlFor={id}
-                className="absolute -top-4 left-4 bg-accent"
+                className={`absolute -top-4 left-4  ${bg}`} 
             >
                 {label}
             </label>

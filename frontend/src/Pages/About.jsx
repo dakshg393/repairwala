@@ -6,6 +6,7 @@ import { mainPageTitleBanner } from "../assets/Images/index.js";
 import s2banner1 from "../assets/Images/About/s2banner1.png";
 import s2banner2 from "../assets/Images/About/s2banner2.png";
 import { ToolCase } from "lucide-react";
+import { features } from "../utils/About.utils.jsx";
 
 
 const About = () => {
@@ -53,63 +54,22 @@ const About = () => {
                         </div>
 
                         {/* Icons Div */}
-                        <div className="flex gap-10 flex-wrap w-full">
 
-                            <div className="flex flex-row flex-wrap gap-auto">
-                                <div className="max-h-[137px] max-w-[194px] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
+
+                        <div className="grid justify-items-center grid-cols-[repeat(auto-fit,minmax(194px,1fr))] gap-10 w-full">
+                            {features.map((feature, index) => (
+                                <div
+                                    key={index}
+                                    className="max-h-[137px] max-w-[194px] w-full flex justify-center items-center rounded-[10px] p-2.5 flex-col bg-accent"
+                                >
                                     <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
+                                        <feature.icon className="size-[35px]" />
                                     </span>
-                                    <h1>Risk Free Services</h1>
-
+                                    <h1>{feature.title}</h1>
                                 </div>
-                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
-                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
-                                    </span>
-                                    <h1>Risk Free Services</h1>
-
-                                </div>
-                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
-                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
-                                    </span>
-                                    <h1>Risk Free Services</h1>
-
-                                </div>
-
-
-                            </div>
-
-  <div className="flex flex-row flex-wrap gap-auto">
-                                <div className="max-h-[137px] max-w-[194px] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
-                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
-                                    </span>
-                                    <h1>Risk Free Services</h1>
-
-                                </div>
-                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
-                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
-                                    </span>
-                                    <h1>Risk Free Services</h1>
-
-                                </div>
-                                <div className="h-[137px] w-[194] flex justify-center items-center rounded-[10px] p-2.5  flex-col bg-accent ">
-                                    <span className="size-[71px] p-4 rounded-full bg-[#C6DBDB]">
-                                        <ToolCase className="size-[35px]    " />
-                                    </span>
-                                    <h1>Risk Free Services</h1>
-
-                                </div>
-
-
-                            </div>
-
-
-
+                            ))}
                         </div>
+
 
 
                     </div>

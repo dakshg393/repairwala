@@ -1,16 +1,24 @@
 import React from "react";
-import { AuthContainerBanner } from "../../assets/Images";
+import { AuthContainerBanner, logo } from "../../assets/Images";
+import { Link } from "react-router-dom";
 
-const AuthContainer = ({children}) => {
+const AuthContainer = ({ children }) => {
     return (
-        <div className="relative flex h-screen">
+        <div className="relative flex h-screen md:h-full">
             {/* Left image container */}
-            <div className="relative">
+            <div className="relative hidden md:block">
                 <img
                     src={AuthContainerBanner}
                     alt="Repair Wala"
                     className="h-full object-cover"
                 />
+                <Link to={"/"} className="absolute top-6 left-6 z-10">
+                    <img
+                        src={logo}
+                        alt="Logo"
+                        className="w-[210px] h-[49px]"
+                    />
+                </Link>
             </div>
 
             {/* Right form container */}

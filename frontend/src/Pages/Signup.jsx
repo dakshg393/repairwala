@@ -10,7 +10,7 @@ import { FcGoogle   } from "react-icons/fc";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 
 
-const Login = () => {
+const Signup = () => {
     const {
         register,
         handleSubmit,
@@ -33,21 +33,29 @@ const Login = () => {
                         <img src={logo} alt="Logo" />
                     </span>
                     <span className="flex flex-col gap-[15px] items-center justify-center text-center">
-                        <h1>Sign in to your account</h1>
-                        <p>Don't have an account? <Link to={'/signup'} className="text-[#00A76F]">Get started</Link></p>
+                        <h1>Get started absolutely free</h1>
+                        <p>Already have an account? <Link to={'/login'} className="text-[#00A76F]">Sign in</Link></p>
                     </span>
                 </div>
 
                 {/* Bottom Div Include Form With Mail id and Password */}
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex items-center justify-center flex-col gap-[30px] w-full">
-                    <InputBox className={"w-full"} id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-white" required />
-                    <span className="flex flex-col w-full gap-[15px]">
-                        <Link to={'/forgotpassword'} className="text-right">Forgot Password?</Link>
-                        <InputBox className={"w-full"} id={"password"} label={"Password"} type="password" placeholder=" Enter 6+ Carecters" register={register} bg="bg-white" required />
-                    </span>
+                    <span className="flex flex-row w-full gap-[15px]">
+                         <InputBox className={"w-[50%]"} id={"firstname"} label={"First Name"} type="text" placeholder=" Enter First Name" register={register} bg="bg-white" required />
+                         <InputBox className={"w-1/2"} id={"lastname"} label={"Last Name"} type="text" placeholder=" Enter Last Name" register={register} bg="bg-white" required />
+                   
 
-                    <Button type="submit" className="w-full max-w-none justify-center">Sign In</Button>
+                           </span>
+
+                    <InputBox className={"w-full"} id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-white" required />
+                    
+                        <InputBox className={"w-full"} id={"password"} label={"Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
+                        <InputBox className={"w-full"} id={"confpassword"} label={"Confirm Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
+                 
+
+                    <Button type="submit" className="w-full max-w-none justify-center">Create account</Button>
+                    <p>By signing up, I agree to <Link to={'/termsandconditions'} className="underline"> terms of use</Link> and <Link to={'/privacypolicy'} className="underline">privacy policy</Link>.</p>
                     <DashedLine>OR</DashedLine>
                     <span className="flex flex-row gap-4">
                         <span><FcGoogle   className="h-[20px] w-[20px]"/></span>
@@ -65,4 +73,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Signup

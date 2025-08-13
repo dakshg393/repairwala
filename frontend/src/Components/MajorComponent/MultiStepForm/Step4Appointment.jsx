@@ -2,21 +2,24 @@ import React from "react"
 import InputBox from "../../MinorComponent/InputBox"
 
 
-const Step4Appointment = ({register}) => {
- 
+const Step4Appointment = ({ register }) => {
+
     return (
 
         <div className="flex flex-col   gap-[40px] w-full h-full">
-            <h1 className="text-center">Book Appointment</h1>
-            <span className="flex flex-row gap-[29px]">
-                <InputBox id={"firstname"} label={"First Name"} type="text" placeholder=" Enter First Name" bg="bg-[#E5F2F2]" register={register} required />
-                <InputBox id={"lastname"} label={"Last Name"} type="text" placeholder=" Enter First Name" bg="bg-[#E5F2F2]" register={register} required />
-            </span>
-            <InputBox id={"phonenumber"} label={"Phone Number"} type="text" placeholder=" Enter Phone Number" bg="bg-[#E5F2F2]" register={register} required />
-            <InputBox id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-[#E5F2F2]" required />
+            <h1 className="text-center">Mode of Payment</h1>
 
-            <h1>Click Next & You Required Services</h1>
-            <h1>Note: Services Available Cities are Indore</h1>
+            <label class="flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="option" value="A" className="accent-blue-500" />
+                <span>Pay At Service Delievery.</span>
+            </label>
+
+          
+          <span>
+            <p>1. Visiting, Home Inspection & Cost Estimation Charges INR 299.00 </p>
+            <p>2. Free Inspection Charges with Repair & Services</p>
+
+          </span>
         </div>
     )
 }

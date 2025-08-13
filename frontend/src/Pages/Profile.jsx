@@ -6,6 +6,9 @@ import Button from "../Components/MinorComponent/Button.jsx";
 import InputBox from "../Components/MinorComponent/InputBox.jsx";
 import { useForm } from "react-hook-form";
 import {Link} from "react-router-dom"
+import { IoPersonOutline } from "react-icons/io5";
+import { MdLogout } from "react-icons/md";
+
 const Profile = () => {
 
 
@@ -35,8 +38,8 @@ const Profile = () => {
 
                 <div className="bg-accent w-full p-[25px] gap-[63px] rounded-[20px] flex flex-col md:flex-row">
                     <div className="flex  flex-1 flex-col gap-[32px]  ">
-                        <Button className="p-[20px] gap-[10px] md:w-[338px] h-[64px] max-w-none">Account Details</Button>
-                        <Button className="bg-accent p-[20px] gap-[10px] md:w-[338px] h-[64px] max-w-none">Logout </Button>
+                        <Button className="p-[20px] gap-[10px] md:w-[338px] h-[64px] max-w-none"><span className="flex flex-row flex-between gap-45">Account Details <span className="text-right"> <IoPersonOutline/></span></span></Button>
+                        <Button className="border-primary  bg-transparent border-2 p-[20px] gap-[10px] md:w-[338px] h-[64px] max-w-none"><span className="flex flex-row flex-between gap-60 text-primary">Logout <span> <MdLogout/></span></span> </Button>
                     </div>
 
                     <div className="flex flex-col   md:w-[782px] gap-[50px]">

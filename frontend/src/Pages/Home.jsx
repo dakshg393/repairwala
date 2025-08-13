@@ -130,7 +130,7 @@ const Home = () => {
                     <FrezzerBanner banner={s3banner1} insideBoxCss={"sm:4 md:p-6"}>
                         <h1 className="font-heading font-medium text-heading">Repair Wala Services Process</h1>
                         <div className="flex items-start gap-5 justify-between flex-col md:flex-row w-full ">
-                            <div className="flex flex-col gap-y-3.5">
+                            <div className="flex flex-col gap-y-3.5 text-start">
                                 <h1 className="font-bold font-heading text-[36px]">01</h1>
                                 <h1 className="font-medium font-heading text-[24px]" >Book your appointment</h1>
                                 <p className="font-normal font-para text-para ">Contact us via phone or online to<br />
@@ -138,7 +138,7 @@ const Home = () => {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col gap-y-3.5">
+                            <div className="flex flex-col gap-y-3.5 text-start">
                                 <h1 className="font-bold font-heading text-[36px]">02</h1>
                                 <h1 className="font-medium font-heading text-[24px]">Inspection & service</h1>
                                 <p className="font-normal font-para text-para ">Our certified technicians will <br />
@@ -147,7 +147,7 @@ const Home = () => {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col gap-y-3.5">
+                            <div className="flex flex-col gap-y-3.5 text-start">
                                 <h1 className="font-bold font-heading text-[36px]">03</h1>
                                 <h1 className="font-medium font-heading text-[24px]">Follow-up & support</h1>
                                 <p className="font-normal font-para text-para ">We provide follow-up support <br />
@@ -267,7 +267,7 @@ const Home = () => {
                 {/* <div className="" style={{ backgroundImage: `url(${s6banner1})` }}>
 
                 </div> */}
-                <img className="w-full h-[582px] md:h-[366px]" src={s6banner1} alt="s6banner1" />
+                <img className="w-full h-[366px]  " src={s6banner1} alt="s6banner1" />
 
             </section>
 

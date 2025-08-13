@@ -25,7 +25,7 @@
 
 import React from "react";
 
-const InputBox = ({ label, id, register, required = false, type = "text", placeholder="", className ,bg="bg-accent"}) => {
+const InputBox = ({children, label, id, register, required = false, type = "text", placeholder="", className ,bg="bg-accent"}) => {
     return (
         <div className={`relative bg-inherit w-auto h-[54px] border-1 rounded-xl p-2 ${className} ${bg}`}>
             <input
@@ -41,6 +41,7 @@ const InputBox = ({ label, id, register, required = false, type = "text", placeh
             >
                 {label}
             </label>
+            {children}
         </div>
     );
 };
