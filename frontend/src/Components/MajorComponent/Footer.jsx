@@ -6,9 +6,10 @@ import logo from "../../assets/Images/Logo.png";
 import footerBg from "../../assets/Images/FooterBg.png"
 import { ArrowUp, Instagram } from "lucide-react";
 import SocialMediaBox from "../MinorComponent/SocialIconsBox"; 
-import {Link, NavLink} from "react-router-dom"
+import {Link, NavLink, useNavigate} from "react-router-dom"
 
 const Footer = () => {
+    const navigate = useNavigate()
     return (
         <footer className="flex flex-col items-center h-auto w-full px-4">
 
@@ -17,7 +18,7 @@ const Footer = () => {
                 <div className="h-full flex items-center justify-center gap-[70px] flex-col">
                     <h1 className="text-[32px] font-heading font-medium">Having a problem? We’ll fixed it today!</h1>
                     <p className="text-para font-para font-semibold ">Please feel free to contact us. We’re super happy to talk to you.</p>
-                    <Button>Contact us Now</Button>
+                    <Button onClick={()=>navigate('/contactus')}>Contact us Now</Button>
                 </div>
             </FrezzerBanner>
 

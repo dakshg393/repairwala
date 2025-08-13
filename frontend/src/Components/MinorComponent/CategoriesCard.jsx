@@ -1,8 +1,10 @@
 import React from "react"
 import Button from "./Button"
 import talivison from '../../assets/Images/Categories/smartTv.png'
+import { useNavigate } from "react-router-dom"
 
 const CategoriesCard = () => {
+    const navigate = useNavigate()
     return (
         <div className="w-74 h-83 p-2.5 rounded-2xl flex flex-col bg-accent">
             <div className="w-full h-64 gap-2.5">
@@ -14,7 +16,7 @@ const CategoriesCard = () => {
 
             </div>
             <div className="">
-                <Button>Book Now</Button>
+                <Button onClick={()=>navigate('/appointment')}>Book Now</Button>
             </div>
         </div>
     )

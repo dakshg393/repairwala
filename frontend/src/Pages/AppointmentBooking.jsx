@@ -19,11 +19,15 @@ const AppointmentBooking = () => {
         register,
         handleSubmit,
         reset,
+        watch,
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data,e) => {
+    const onSubmit = (data, e) => {
+
         e.preventDefault();
+
+        setCurrentStep(6)
         console.log("Form Data:", data);
         // you can send data to backend here
     };
@@ -32,40 +36,25 @@ const AppointmentBooking = () => {
 
 
     const [currentStep, setCurrentStep] = useState(1);
-    const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        services: [],
-        date: "",
-        address: "",
-        paymentMethod: ""
-    });
+    const formData = watch()
 
-    const handleChange = (e) => {
+    const nextStep = (e) => {
         e.preventDefault();
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const nextStep = (e) =>{
-          e.preventDefault();
-          setCurrentStep((prev) => prev + 1);
-    } 
-    const prevStep = (e) =>{
-         e.preventDefault();
+        setCurrentStep((prev) => prev + 1);
+    }
+    const prevStep = (e) => {
+        e.preventDefault();
         setCurrentStep((prev) => prev - 1);
-    } 
+    }
 
-    // const handleSubmit = () => {
-    //     console.log(formData);
-    //     // send to backend API
-    // };
+
 
     return (
 
 
         <section className="flex  justify-between bg-accent min-h-screen relative w-full pb-20">
+
+            {/* Logo Div in Side Corner */}
             <div className="mt-6 flex justify-center w-full">
                 <Link to={"/"}>
                     <img
@@ -76,9 +65,10 @@ const AppointmentBooking = () => {
                 </Link>
             </div>
 
+
             <div className="flex h-full justify-center ">
 
-
+                {/* Appintment form main div that will overflow */}
                 <div className="bg-[#E5F2F2] w-[90vw] md:w-[820px] min-h-[639px]  rounded-[20px] absolute top-[140px] left-[24px] p-10">
 
                     {/* Steps Div */}
@@ -101,21 +91,112 @@ const AppointmentBooking = () => {
 
                         <div className="">
 
-                            {currentStep === 1 && <Step1Appointment formData={formData} handleChange={handleChange} register={register} />}
-                            {currentStep === 2 && <Step2Appointment formData={formData} handleChange={handleChange} register={register} />}
-                            {currentStep === 3 && <Step3Appointment formData={formData} handleChange={handleChange} register={register} />}
-                            {currentStep === 4 && <Step4Appointment formData={formData} handleChange={handleChange} register={register} />}
+                            {currentStep === 1 && <Step1Appointment register={register} />}
+                            {currentStep === 2 && <Step2Appointment register={register} />}
+                            {currentStep === 3 && <Step3Appointment register={register} />}
+                            {currentStep === 4 && <Step4Appointment register={register} />}
+
+                            {/* Preview of Appointment details */}
+                            {currentStep === 5 && (
+                                <div className="flex flex-col gap-[30px]">
+                                    <h1 className=" font-para font-semibold text-[24px]">Reviews</h1>
+
+                                    <div className="flex flex-col gap-[15px]">
+
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+
+                                            <h3 id="personal-details" className="font-heading font-bold text-[14px]">Personal Details</h3>
+                                            <p className="font-medium"><strong>Name:</strong>{formData.firstname.toUpperCase()} {formData.lastname.toUpperCase()} </p>
+                                            <p className="font-medium"><strong>Contact:</strong> {formData.phonenumber}</p>
+                                            <p className="font-medium"><strong>Email:</strong> {formData.email}</p>
+
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="appointment-details" className="font-heading font-bold text-[14px]">Appointment Details</h3>
+                                            <p className="font-medium"><strong>Category:</strong> {formData.category}</p>
+                                            <p className="font-medium"><strong>Brand:</strong> {formData.brand}</p>
+                                            <p className="font-medium"><strong>Model:</strong> {formData.model}</p>
+                                            {/* <p className="font-medium"><strong>Date / Time:</strong> {formData}</p> */}
+                                            <p className="font-medium"><strong>Message:</strong> {formData.message}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="address-details" className="font-heading font-bold text-[14px]">Address Details</h3>
+                                            <p className="font-medium"><strong>Street Address:</strong> {formData.stress}</p>
+                                            <p className="font-medium"><strong>Street Address (Optional):</strong> {formData.stress2}</p>
+                                            <p className="font-medium"><strong>City:</strong> {formData.city}</p>
+                                            <p className="font-medium"><strong>State:</strong> {formData.state}</p>
+                                            <p className="font-medium"><strong>Postal / Zip Code:</strong> {formData.Poatel}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="payment-details" className="font-heading font-bold text-[14px]">Payment Details</h3>
+                                            <p className="font-medium" ><strong>Mode of Payment:</strong> During Visit</p>
+                                        </div>
+
+                                    </div>
+
+                                    <p>We will contact you about the time slot on a particular day as per your availability.</p>
+                                </div>
+                            )}
+
+                            {currentStep === 6 && (
+
+
+
+                                <div className="flex flex-col gap-[30px]">
+                                    <span><Link to={'/'}>Back</Link></span>
+                                    <span><img src={logo} alt="" /></span>
+
+                                    <h1 className=" font-para font-semibold text-[24px]">Booking Details</h1>
+
+                                    <div className="flex flex-col gap-[15px]">
+
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+
+                                            <h3 id="personal-details" className="font-heading font-bold text-[14px]">Personal Details</h3>
+                                            <p className="font-medium"><strong>Name:</strong>{formData.firstname.toUpperCase()} {formData.lastname.toUpperCase()} </p>
+                                            <p className="font-medium"><strong>Contact:</strong> {formData.phonenumber}</p>
+                                            <p className="font-medium"><strong>Email:</strong> {formData.email}</p>
+
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="appointment-details" className="font-heading font-bold text-[14px]">Appointment Details</h3>
+                                            <p className="font-medium"><strong>Category:</strong> {formData.category}</p>
+                                            <p className="font-medium"><strong>Brand:</strong> {formData.brand}</p>
+                                            <p className="font-medium"><strong>Model:</strong> {formData.model}</p>
+                                            {/* <p className="font-medium"><strong>Date / Time:</strong> {formData}</p> */}
+                                            <p className="font-medium"><strong>Message:</strong> {formData.message}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="address-details" className="font-heading font-bold text-[14px]">Address Details</h3>
+                                            <p className="font-medium"><strong>Street Address:</strong> {formData.stress}</p>
+                                            <p className="font-medium"><strong>Street Address (Optional):</strong> {formData.stress2}</p>
+                                            <p className="font-medium"><strong>City:</strong> {formData.city}</p>
+                                            <p className="font-medium"><strong>State:</strong> {formData.state}</p>
+                                            <p className="font-medium"><strong>Postal / Zip Code:</strong> {formData.Poatel}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-[7px] text-[14px]">
+                                            <h3 id="payment-details" className="font-heading font-bold text-[14px]">Payment Details</h3>
+                                            <p className="font-medium" ><strong>Mode of Payment:</strong> During Visit</p>
+                                        </div>
+
+                                    </div>
+
+                                 
+                                </div>
+
+
+
+
+                            )}
 
                         </div>
                         <div className="flex flex-row gap-[20px] pt-[20px]">
-                            {currentStep > 1 && <Button onClick={prevStep}>Back</Button>}
+                            {currentStep >1  && currentStep <=5 && ( <Button onClick={prevStep}>Back</Button>)}
                             {currentStep < 5 && <Button onClick={nextStep}>Next</Button>}
                             {currentStep === 5 && <Button type="submit" onClick={handleSubmit}>Submit</Button>}
                         </div>
 
                     </form>
-
-
 
                 </div>
 
@@ -124,25 +205,12 @@ const AppointmentBooking = () => {
 
 
 
-
+            {/* Side image Banner on Appointment page */}
             <div className="w-[513px] h-[832px] bg-primary right-0 rounded-bl-[30px] rounded-tl-[30px] flex items-center">
                 <img src={AppointmentBanner} alt="" />
             </div>
 
 
-
-
-            {/* 
-            {currentStep === 1 && <Step1Appointment formData={formData} handleChange={handleChange} />}
-            {currentStep === 2 && <Step2Services formData={formData} handleChange={handleChange} />}
-            {currentStep === 3 && <Step3Address formData={formData} handleChange={handleChange} />}
-            {currentStep === 4 && <Step4Payment formData={formData} handleChange={handleChange} />}
-
-            <div>
-                {currentStep > 1 && <button onClick={prevStep}>Back</button>}
-                {currentStep < 4 && <button onClick={nextStep}>Next</button>}
-                {currentStep === 4 && <button onClick={handleSubmit}>Submit</button>}
-            </div> */}
         </section>
 
 

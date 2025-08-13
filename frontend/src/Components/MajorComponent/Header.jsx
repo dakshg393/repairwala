@@ -168,7 +168,7 @@ const Header = () => {
                         </div>
 
                         <div className="flex flex-row gap-4 items-center text-[12px] font-para font-bold ">
-                            <Link >Book Appointment</Link>
+                            <Link to={'/appointment'}>Book Appointment</Link>
                             <Button className="font-bold">Login Employee DashBoard</Button>
                         </div>
 
@@ -210,9 +210,9 @@ const Header = () => {
 
                         </div>
                     </div>
-                    <div className="p-4 flex flex-col w-full gap-[8px]">
-                        <button className="bg-[#F7F7F7] w-full">View Cart</button>
-                        <button className="bg-primary w-full">CheckOut</button>
+                    <div className="p-4 flex flex-col w-full gap-[8px] ">
+                        <Button className="bg-transparent  w-full max-w-none text-center justify-center">View Cart</Button>
+                        <Button className=" w-full max-w-none justify-center">CheckOut</Button>
 
                     </div>
                 </div>

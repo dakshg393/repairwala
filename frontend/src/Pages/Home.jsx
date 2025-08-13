@@ -91,7 +91,7 @@ const Home = () => {
                             relationship is <b>communication</b></h1>
                             <h1 className="font-normal font-heading text-para text-primary-text">Multiple ways to reach us.</h1>
                         </span>
-                        <Button className="" >Book Now</Button>
+                        <Button onClick={()=>navigate("/appointment")} className="" >Book Now</Button>
                     </div>
 
                     <div className=" flex justify-between items-end flex-col  gap-y-2.5 flex-wrap font-heading font-normal text-[16px] ">
@@ -223,7 +223,7 @@ const Home = () => {
                             </div>
 
                             <div>
-                                <Button>View Services</Button>
+                                <Button  onClick={()=>navigate("/services")}>View Services</Button>
                             </div>
 
                         </div>

@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 import Button from "../Components/MinorComponent/Button";
 import DashedLine from "../Components/MinorComponent/DashedLine.jsx";
 import { Link } from "react-router-dom";
-import { ICpassword,ICemail } from "../assets/icons/index.js";
+import { ICpassword, ICemail } from "../assets/icons/index.js";
+import OTPBox from "../Components/MajorComponent/OTPBox.jsx";
 
 
 const ForgotPassword = () => {
@@ -19,11 +20,11 @@ const ForgotPassword = () => {
 
     return (
         <AuthContainer>
-           
-           
+
+
             {/* <div className="w-[420px] flex flex-col gap-[50px] px-3 py-5"> */}
-                {/* Top Div Include Logo And Title */}
-                {/* <div className="flex flex-col gap-[30px] items-center justify-center">
+            {/* Top Div Include Logo And Title */}
+            {/* <div className="flex flex-col gap-[30px] items-center justify-center">
                     <span>
                         <img src={ICpassword} alt="Logo" />
                     </span>
@@ -33,9 +34,9 @@ const ForgotPassword = () => {
                     </span>
                 </div> */}
 
-                {/* Bottom Div Include Form With Mail id and Password */}
+            {/* Bottom Div Include Form With Mail id and Password */}
 
-                {/* <div className="flex items-center justify-center flex-col gap-[30px] w-full">
+            {/* <div className="flex items-center justify-center flex-col gap-[30px] w-full">
                     <InputBox className={"w-full"} id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-white" required />
                    
 
@@ -59,7 +60,7 @@ const ForgotPassword = () => {
 
 
 
-              <div className="w-[420px] flex flex-col gap-[50px] px-3 py-5">
+            <div className="w-[420px] flex flex-col gap-[50px] px-3 py-5">
                 {/* Top Div Include Logo And Title */}
                 <div className="flex flex-col gap-[30px] items-center justify-center">
                     <span>
@@ -75,15 +76,20 @@ const ForgotPassword = () => {
 
                 <div className="flex items-center justify-center flex-col gap-[30px] w-full">
                     <InputBox className={"w-full"} id={"email"} label={"Email"} type="email" placeholder=" Enter Email" register={register} bg="bg-white" required />
-                     <InputBox className={"w-full"} id={"password"} label={"Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
-                        <InputBox className={"w-full"} id={"confpassword"} label={"Confirm Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
-                 
+                    
+                    
+                    <OTPBox id="otp" label="Verification Code" length={6} register={register}  required />
+                    
+                    
+                    <InputBox className={"w-full"} id={"password"} label={"Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
+                    <InputBox className={"w-full"} id={"confpassword"} label={"Confirm Password"} type="password" placeholder="Enter 6+ Charecters" register={register} bg="bg-white" required />
+
                     <Button className="w-full max-w-none justify-center">Update Password </Button>
 
-                    <p>Don’t have a code? <span  className="text-[#00A76F]"> Resend code</span></p>
-                                        
-                   
-                    <Link to={'/login'} > &lt; <span  className="underline"> Return to sign in </span></Link>
+                    <p>Don’t have a code? <span className="text-[#00A76F]"> Resend code</span></p>
+
+
+                    <Link to={'/login'} > &lt; <span className="underline"> Return to sign in </span></Link>
                 </div>
 
 
