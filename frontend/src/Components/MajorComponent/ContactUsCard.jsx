@@ -16,9 +16,9 @@ const ContactUsCard = ({ className }) => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = (data,e) => {
+        e.preventDefault();
         console.log("Submitted:", data);
-        // TODO: send data to your backend here
         reset();
     };
 
@@ -71,7 +71,7 @@ const ContactUsCard = ({ className }) => {
             {/* Contact Form */}
             <div className="flex-1 bg-accent p-8 w-auto rounded-2xl">
 
-                <form className="flex w-full  flex-col gap-[30px]">
+                <form onSubmit={handleSubmit(onSubmit)} className="flex w-full  flex-col gap-[30px]">
                     <div>
                     <h1 className="font-heading font-medium text-heading text-primary">Contact Repairwala </h1>
                     <p className="font-heading font-normal text-para text-primary">If you have a question, please reach out to our national office below:</p>

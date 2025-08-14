@@ -14,7 +14,8 @@ const RequestCallbackForm = ({ className }) => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = (data,e) => {
+        e.preventDefault();
         console.log("Submitted:", data);
         // TODO: send data to your backend here
         reset();
@@ -43,7 +44,7 @@ const RequestCallbackForm = ({ className }) => {
             {/* Contact Form */}
             <div className="flex-1 bg-accent p-8 w-auto rounded-2xl">
 
-                <form className="flex w-full  flex-col gap-[36px]">
+                <form onSubmit={handleSubmit(onSubmit)} className="flex w-full  flex-col gap-[36px]">
                     <h1 className="font-medium font-heading text-[32px] text-primary">Fill the Form to <br />
                         Request Free Call Back
                     </h1>
@@ -96,7 +97,7 @@ const RequestCallbackForm = ({ className }) => {
 
                     </div>
 
-                    <Button>SUBMIT</Button>
+                    <Button type="submit">SUBMIT</Button>
 
 
                 </form>

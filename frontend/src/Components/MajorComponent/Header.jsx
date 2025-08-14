@@ -4,6 +4,7 @@ import Button from "../MinorComponent/Button";
 import { categories, mobileNavItems, navItems } from "../../utils/Home.utils";
 import { Link, NavLink } from "react-router-dom";
 import { User, AlignLeft, ShoppingCart } from 'lucide-react';
+import { refrigerators } from "../../assets/Images/Categories/index.js";
 
 const Header = () => {
 
@@ -132,7 +133,7 @@ const Header = () => {
 
                             {/* Categories Div When User CLick on Browse All Categories */}
                             {browseCategories &&
-                                <div className="hidden md:flex flex-col  p-[10px]  absolute top-48 left-10 w-[268px]  rounded-[20px] bg-white gap-[4px]">
+                                <div className="hidden md:flex flex-col  p-[10px]  absolute top-48 left-10 w-[268px]  rounded-[20px] bg-white gap-[4px] z-40">
                                     <div className="flex flex-col gap-[4px]">
                                         {categories.map((categorie) => (
                                             <Link className="hover:bg-accent h-[44px] w-[248px] flex items-center rounded-xl" to={'/'}>{categorie.name}</Link>
@@ -142,7 +143,6 @@ const Header = () => {
                                     <div className="w-[248px] h-[203px] rounded-[20px]">
                                         <img src={CategoriesDivBanner} alt="CategoriesDivBanner" className="w-[248px] h-[203px]" />
                                     </div>
-
                                 </div>
 
                             }
@@ -194,14 +194,14 @@ const Header = () => {
 
                         <div className="flex flex-col gap-[15px]">
                             <Link className="flex flex-row items-center gap-[10px] p-[7px]">
-                                <img src="" alt="cart Image" />
+                                <img src={refrigerators} className="size-[40px] rounded-sm" alt="cart Image" />
                                 <span>
                                     <h1>Refrigrator</h1>
                                     <h3>13-11-25</h3>
                                 </span>
                             </Link>
                             <Link className="flex flex-row items-center gap-[10px] p-[7px]">
-                                <img src="" alt="cart Image" />
+                                <img src={refrigerators} className="size-[40px] rounded-sm" alt="cart Image" />
                                 <span>
                                     <h1>Refrigrator</h1>
                                     <h3>13-11-25</h3>
@@ -211,7 +211,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="p-4 flex flex-col w-full gap-[8px] ">
-                        <Button className="bg-transparent  w-full max-w-none text-center justify-center">View Cart</Button>
+                        <Button className="bg-transparent +++  w-full max-w-none text-center justify-center">View Cart</Button>
                         <Button className=" w-full max-w-none justify-center">CheckOut</Button>
 
                     </div>

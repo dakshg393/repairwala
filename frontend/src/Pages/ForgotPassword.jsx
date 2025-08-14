@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import Button from "../Components/MinorComponent/Button";
 import DashedLine from "../Components/MinorComponent/DashedLine.jsx";
 import { Link } from "react-router-dom";
-import { ICpassword, ICemail } from "../assets/icons/index.js";
+import { ICpassword, ICemail, ICplan } from "../assets/icons/index.js";
 import OTPBox from "../Components/MajorComponent/OTPBox.jsx";
 
 
@@ -64,7 +64,7 @@ const ForgotPassword = () => {
                 {/* Top Div Include Logo And Title */}
                 <div className="flex flex-col gap-[30px] items-center justify-center">
                     <span>
-                        <img src={ICemail} alt="Logo" />
+                        <img src={ICplan} alt="Logo" />
                     </span>
                     <span className="flex flex-col gap-[15px] items-center justify-center">
                         <h1>Request sent successfully!</h1>

@@ -19,9 +19,8 @@ const Signup = () => {
     } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Email:", data.email);
-    console.log("Password:", data.password);
-    // reset(); // Uncomment if you want to clear form after submit
+    console.log("data:", data);
+
   };
     return (
         <AuthContainer>

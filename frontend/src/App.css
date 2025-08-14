@@ -36,3 +36,25 @@
 
 
 }
+
+
+
+@layer utilities {
+  .texture-noise {
+    position: relative;
+  }
+  .texture-noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-radial-gradient(
+      circle at random(100%) random(100%),
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 100%
+    );
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
